@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حلول الذكاء | منصة الخدمات الرقمية والذكاء الاصطناعي</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Cairo) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #db2777 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+        }
+        .chat-shadow {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center text-white font-black text-xl shadow-md">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <span class="text-2xl font-black gradient-text">حلول الذكاء</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8 font-semibold text-slate-600">
+                    <a href="#hero" class="hover:text-blue-600 transition-colors">الرئيسية</a>
+                    <a href="#services" class="hover:text-blue-600 transition-colors">خدماتنا</a>
+                    <a href="#features" class="hover:text-blue-600 transition-colors">لماذا نحن</a>
+                    <a href="#testimonials" class="hover:text-blue-600 transition-colors">التقييمات</a>
+                    <a href="#contact" class="hover:text-blue-600 transition-colors">تواصل معنا</a>
+                </div>
+
+                <!-- Action Button -->
+                <div class="hidden md:block">
+                    <button onclick="toggleChat()" class="px-6 py-2.5 rounded-full gradient-bg text-white font-medium shadow-md hover:opacity-95 transition-all">
+                        تحدث مع المساعد الذكي
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-4 space-y-3">
+            <a href="#hero" class="block py-2 text-slate-600 hover:text-blue-600 font-medium">الرئيسية</a>
+            <a href="#services" class="block py-2 text-slate-600 hover:text-blue-600 font-medium">خدماتنا</a>
+            <a href="#features" class="block py-2 text-slate-600 hover:text-blue-600 font-medium">لماذا نحن</a>
+            <a href="#testimonials" class="block py-2 text-slate-600 hover:text-blue-600 font-medium">التقييمات</a>
+            <a href="#contact" class="block py-2 text-slate-600 hover:text-blue-600 font-medium">تواصل معنا</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-12 pb-20 md:pt-24 md:pb-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-right space-y-6">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-sm font-bold border border-blue-100">
+                        🚀 الحل الشامل للتحول الرقمي
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 leading-tight">
+                        نساعد عملك على النمو باستخدام <span class="gradient-text">الذكاء الاصطناعي</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                        نقدم أحدث الحلول البرمجية وأنظمة الأتمتة المبتكرة لرفع كفاءة شركتك وتطوير أعمالك بأعلى مستويات الجودة والأمان.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#services" class="px-8 py-3.5 rounded-full bg-slate-900 text-white font-semibold shadow-lg hover:bg-slate-800 transition-all text-center">
+                            استكشف خدماتنا
+                        </a>
+                        <button onclick="toggleChat()" class="px-8 py-3.5 rounded-full bg-white text-slate-700 font-semibold border border-slate-200 shadow-sm hover:bg-slate-50 transition-all text-center">
+                            اسأل المساعد الذكي 💬
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative flex justify-center">
+                    <div class="w-80 h-80 rounded-full bg-gradient-to-tr from-blue-300 to-purple-300 blur-3xl opacity-40 absolute"></div>
+                    <div class="relative bg-white p-8 rounded-3xl shadow-xl border border-slate-100 max-w-md w-full space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center text-white text-2xl">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900">أداء وسرعة فائقة</h3>
+                                <p class="text-xs text-slate-500">حلول متكاملة 24/7</p>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-3">
+                            <div class="flex justify-between text-sm font-semibold">
+                                <span>رضا العملاء</span>
+                                <span class="text-blue-600">98%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 98%"></div>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-3">
+                            <div class="flex justify-between text-sm font-semibold">
+                                <span>أتمتة المهام</span>
+                                <span class="text-purple-600">85%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-black text-slate-900 mb-4">خدماتنا المتميزة</h2>
+                <p class="text-slate-600">نقدم حلولاً متكاملة لتلبية كافة احتياجات أعمالك في العصر الرقمي.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">تطوير الويب والتطبيقات</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">تصميم وتطوير مواقع وتطبيقات تفاعلية وسريعة الاستجابة بأحدث التقنيات البرمجية.</p>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">تكامل الذكاء الاصطناعي</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">بناء نماذج الشات بوت الذكية وأتمتة خدمة العملاء لرفع كفاءة التواصل.</p>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-pink-100 text-pink-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">الأمن السبراني والحماية</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">تأمين البيانات والتطبيقات وحماية موقعك من كافة الثغرات والتهديدات الرقمية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-900 rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-black mb-2">هل لديك أي استفسار؟</h2>
+                    <p class="text-slate-400 text-sm">تواصل معنا الآن أو تحدث مع شات بوت الذكاء المدمج بالأسفل!</p>
+                </div>
+
+                <form id="contact-form" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <input type="text" required placeholder="الاسم الكامل" class="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input type="email" required placeholder="البريد الإلكتروني" class="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <textarea rows="3" required placeholder="تفاصيل رسالتك..." class="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    <button type="submit" class="w-full py-3.5 rounded-xl gradient-bg text-white font-bold transition-all hover:opacity-95">
+                        إرسال الرسالة
+                    </button>
+                </form>
+
+                <div id="contact-toast" class="hidden mt-4 p-4 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-center font-medium text-sm">
+                    ✨ تم إرسال رسالتك بنجاح!
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-8 border-t border-slate-100 text-center text-sm text-slate-500">
+        <p>جميع الحقوق محفوظة © 2026 شركة حلول الذكاء الرقمية</p>
+    </footer>
+
+    <!-- Floating AI Chatbot Widget -->
+    <div class="fixed bottom-6 left-6 z-50">
+        <!-- Floating Toggle Button -->
+        <button id="chat-toggle-btn" onclick="toggleChat()" class="relative group flex items-center justify-center w-16 h-16 rounded-full gradient-bg text-white shadow-2xl hover:scale-105 transition-all">
+            <i id="chat-icon-open" class="fa-solid fa-robot text-2xl"></i>
+            <i id="chat-icon-close" class="fa-solid fa-xmark text-2xl hidden"></i>
+            <span class="absolute -top-1 -right-1 flex h-4 w-4">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-4 w-4 bg-pink-500"></span>
+            </span>
+        </button>
+
+        <!-- Chat Window -->
+        <div id="chat-window" class="hidden absolute bottom-20 left-0 w-[90vw] sm:w-[380px] h-[520px] bg-white rounded-3xl chat-shadow border border-slate-100 flex flex-col overflow-hidden transition-all duration-300">
+            <!-- Chat Header -->
+            <div class="gradient-bg p-4 text-white flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-bot"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">المساعد الذكي</h4>
+                        <span class="text-xs text-blue-100 flex items-center gap-1">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block"></span> متصل الآن
+                        </span>
+                    </div>
+                </div>
+                <button onclick="toggleChat()" class="text-white/80 hover:text-white p-1">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Chat Messages Container -->
+            <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3 bg-slate-50/50 text-sm">
+                <!-- Bot Welcome Message -->
+                <div class="flex gap-2">
+                    <div class="w-7 h-7 rounded-full gradient-bg flex-shrink-0 flex items-center justify-center text-white text-xs">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div class="bg-white p-3 rounded-2xl rounded-tr-none shadow-sm border border-slate-100 text-slate-700 max-w-[80%] leading-relaxed">
+                        أهلاً بك! 👋 أنا المساعد الذكي الخاص بشركة حلول الذكاء. كيف يمكنني مساعدتك اليوم؟
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Action Pills -->
+            <div class="p-2 bg-white border-t border-slate-100 flex gap-2 overflow-x-auto text-xs whitespace-nowrap scrollbar-none">
+                <button onclick="sendQuickMsg('ما هي خدماتكم؟')" class="px-3 py-1.5 rounded-full bg-slate-100 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    💡 ما هي خدماتكم؟
+                </button>
+                <button onclick="sendQuickMsg('طريقة التواصل')" class="px-3 py-1.5 rounded-full bg-slate-100 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    📞 طريقة التواصل
+                </button>
+            </div>
+
+            <!-- Chat Input Form -->
+            <form id="chat-form" class="p-3 bg-white border-t border-slate-100 flex items-center gap-2">
+                <input id="chat-input" type="text" placeholder="اكتب سؤالك هنا..." class="flex-1 px-4 py-2.5 rounded-full bg-slate-100 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button type="submit" class="w-10 h-10 rounded-full gradient-bg text-white flex items-center justify-center hover:opacity-90 transition-opacity">
+                    <i class="fa-solid fa-paper-plane text-sm"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Contact Form
+        const contactForm = document.getElementById('contact-form');
+        const contactToast = document.getElementById('contact-toast');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            contactToast.classList.remove('hidden');
+            contactForm.reset();
+            setTimeout(() => contactToast.classList.add('hidden'), 4000);
+        });
+
+        // Floating AI Chatbot Logic
+        const chatWindow = document.getElementById('chat-window');
+        const chatIconOpen = document.getElementById('chat-icon-open');
+        const chatIconClose = document.getElementById('chat-icon-close');
+        const chatMessages = document.getElementById('chat-messages');
+        const chatForm = document.getElementById('chat-form');
+        const chatInput = document.getElementById('chat-input');
+
+        function toggleChat() {
+            const isHidden = chatWindow.classList.contains('hidden');
+            if (isHidden) {
+                chatWindow.classList.remove('hidden');
+                chatIconOpen.classList.add('hidden');
+                chatIconClose.classList.remove('hidden');
+                chatInput.focus();
+            } else {
+                chatWindow.classList.add('hidden');
+                chatIconOpen.classList.remove('hidden');
+                chatIconClose.classList.add('hidden');
+            }
+        }
+
+        function appendUserMessage(text) {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = 'flex justify-end';
+            msgDiv.innerHTML = `
+                <div class="gradient-bg text-white p-3 rounded-2xl rounded-tl-none shadow-sm max-w-[80%] leading-relaxed">
+                    ${text}
+                </div>
+            `;
+            chatMessages.appendChild(msgDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function appendBotMessage(text) {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = 'flex gap-2';
+            msgDiv.innerHTML = `
+                <div class="w-7 h-7 rounded-full gradient-bg flex-shrink-0 flex items-center justify-center text-white text-xs">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <div class="bg-white p-3 rounded-2xl rounded-tr-none shadow-sm border border-slate-100 text-slate-700 max-w-[80%] leading-relaxed">
+                    ${text}
+                </div>
+            `;
+            chatMessages.appendChild(msgDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function generateBotResponse(input) {
+            const lower = input.toLowerCase();
+            if (lower.includes('خدمات') || lower.includes('ماذا تقدمون') || lower.includes('خدمة')) {
+                return 'نحن نقدم خدمات تطوير المواقع والتطبيقات، حلول الذكاء الاصطناعي والشات بوت، وخدمات الأمن السبراني.';
+            } else if (lower.includes('تواصل') || lower.includes('اتصل') || lower.includes('رقم')) {
+                return 'يمكنك التواصل معنا عبر ملء نموذج التواصل الموجود بالصفحة أو مراسلتنا عبر البريد الإلكتروني support@solutions.ai.';
+            } else if (lower.includes('سعر') || lower.includes('أسعار') || lower.includes('تكلفة')) {
+                return 'تختلف الأسعار حسب نطاق ومتطلبات كل مشروع. تواصل معنا للحصول على عرض سعر مخصص!';
+            } else {
+                return 'شكراً لتواصلك معنا! يسعدنا الإجابة على جميع استفساراتك. يمكنك طلب استشارة مجانية وسيقوم فريقنا بالتواصل معك.';
+            }
+        }
+
+        chatForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const text = chatInput.value.trim();
+            if (!text) return;
+
+            appendUserMessage(text);
+            chatInput.value = '';
+
+            setTimeout(() => {
+                const botReply = generateBotResponse(text);
+                appendBotMessage(botReply);
+            }, 600);
+        });
+
+        function sendQuickMsg(text) {
+            if (chatWindow.classList.contains('hidden')) {
+                toggleChat();
+            }
+            appendUserMessage(text);
+            setTimeout(() => {
+                const botReply = generateBotResponse(text);
+                appendBotMessage(botReply);
+            }, 600);
+        }
+    </script>
+</body>
+</html>
