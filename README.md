@@ -33,15 +33,27 @@ An enterprise-ready digital transformation and AI services landing page featurin
 
 ## 📸 Deployment Proof & Verification
 
-### 1. Live Web Application & AI Chatbot
-![Website Demo](website-demo.png)
+### 1. Live Web Application Overview & UI Sections
+![Platform Header & Hero Section](part1.png)
+*Figure 1: Main landing page hero section showcasing AI digital transformation services.*
 
-### 2. EC2 Instance Running & Network Configuration
-![EC2 Instance](ec2-instance.png)
+![Services & Solutions Breakdown](part2.png)
+*Figure 2: Service architecture and business automation capabilities.*
 
-### 3. S3 Bucket Asset Management
-![S3 Bucket](s3-bucket.png)
+![Customer Reviews & Contact Section](part3.png)
+*Figure 3: Platform client feedback and customer engagement sections.*
 
+### 2. Interactive Conversational AI Assistant
+![AI Chatbot Widget](AI%20chatbot.png)
+*Figure 4: Active embedded AI assistant handling real-time customer queries.*
+
+### 3. AWS EC2 Compute Layer & Networking
+![EC2 Instance](EC2-instance.png)
+*Figure 5: EC2 instance verification in running state with public IPv4 allocation.*
+
+### 4. Amazon S3 Storage Layer
+![S3 Bucket](S3-bucket.png)
+*Figure 6: Centralized asset repository hosting source files in bucket mmypage-2027.*
 ---
 
 ## ⚙️ Automated Deployment Script (User Data)
